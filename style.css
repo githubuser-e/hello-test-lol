@@ -39,11 +39,38 @@ p {
     text-decoration: none;
     border-radius: 25px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #2575fc;
     color: #fff;
+}
+
+.names-container {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.rainbow-text {
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#name-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#name-list li {
+    font-size: 1.5rem;
+    color: white;
+    padding: 10px;
 }
 
 @keyframes fadeIn {
@@ -56,4 +83,3 @@ p {
         transform: translateY(0);
     }
 }
-
