@@ -10,17 +10,21 @@
     <div class="container">
         <h1>Welcome to My Cool Site</h1>
         <p>This is a minimalist and stylish page with a cool gradient background.</p>
-        <a href="#" class="btn" onclick="showNames()">Explore</a>
-    </div>
-    
-    <div id="names-container" class="names-container">
-        <h2 class="rainbow-text">Here are the names:</h2>
-        <ul id="name-list">
-            <!-- Names will appear here -->
-        </ul>
-        <button class="btn" onclick="addName()">Add Name</button>
+        <a href="names.html" class="btn" id="explore-btn">Explore</a>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const exploreBtn = document.getElementById('explore-btn');
+
+        exploreBtn.addEventListener('click', function(e) {
+            e.preventDefault();  // Prevent immediate redirect
+
+            document.body.classList.add('fade-out');  // Add fade-out effect
+
+            setTimeout(() => {
+                window.location.href = exploreBtn.href;  // Redirect after fade-out
+            }, 500);  // Time matches CSS animation duration
+        });
+    </script>
 </body>
 </html>
