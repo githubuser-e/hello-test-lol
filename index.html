@@ -8,9 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>welcome to cool site uhhh yeah idk</h1>
-        <p>this is very cool man</p>
-        <a href="#" class="btn">explore</a>
+        <h1>Welcome to My Cool Site</h1>
+        <p>This is a minimalist and stylish page with a cool gradient background.</p>
+        <a href="#" class="btn" onclick="showNames()">Explore</a>
     </div>
+    
+    <div id="names-container" class="names-container">
+        <h2 class="rainbow-text">Here are the names:</h2>
+        <ul id="name-list">
+            <!-- Names will appear here -->
+        </ul>
+        <button class="btn" onclick="addName()">Add Name</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
